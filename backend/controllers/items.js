@@ -22,31 +22,31 @@ const getTodo = async (req, res) => {
 }
 
 const createTodo = async (req, res) => {
-    // get the text from the req.body
+    const { text } = req.body
+    console.log(text)
+    const todoObj = new Todo({
+        text
+    })
 
-    // create new todo object with model
-
-
-    // await for it to be saved
-
-    // respond with json()
+    const newTodo = await todoObj.save()
+    res.status(200).json(newTodo)  
   
 }
 
 const editTodo = async (req, res) => {
     // get id from ':id' param from the route
-   
+    const { id } = req.params
     // use mongoose model method findByIdAndUpdate
-  
+   let todo = await Todo.findByIdAndUpdate(id, {text: req.body.text})
+   res.status(200).json(todo)
 }
 
 const deleteTodo = async (req, res) => {
     // get id from ':id' param from the route
-    
+    const { id } = req.params
     // use mongoose model method findByIdAndDelete
-   
-
-   
+   let todo = await Todo.findByIdAndDelete(id)
+   res.status(200).json(todo)   
 }
 
 module.exports = {

@@ -2,13 +2,20 @@ import { useEffect, useState } from "react";
 import { readTodos } from "../api/readTodos";
 import Card from '../components/Card'
 import { deleteTodo } from "../api/deleteTodo";
-const Home = () => {
-    const [todos, setTodos] = useState([])
+import './style.css'
 
+const Home = () => {
+    const [todos, setTodos] = useState([]) 
 
     const deleteHandler = async (todo) => {
-      
-    }
+     deleteTodo(todo) 
+     
+     setTodos(todos.filter(item => item !== todo))
+
+     
+     console.log(todo)
+    };
+    
     useEffect(() => {
         const fetchTodos = async () => {
             let data = await readTodos()
@@ -18,9 +25,10 @@ const Home = () => {
         fetchTodos()
     }, [])
 
+
     if (!todos) return <h1>loading...</h1>
     return (
-        <div>
+        <div className="toDoItems">
             <>
                 {
                     todos ? todos.map((todo) => <Card key={todo._id} deleteHandler={deleteHandler} todo={todo}/>)

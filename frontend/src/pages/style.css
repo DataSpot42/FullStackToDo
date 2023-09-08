@@ -1,0 +1,72 @@
+.main {
+    background-color: rgb(233, 244, 240);
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+
+}
+
+.btnLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(94, 243, 181);
+    border-radius: 5px;
+    width: 100px;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid ;
+    margin-left: 5px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    margin: 5px;
+    width: 60%;
+
+}
+.navBarItems {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+
+.toDoItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(203, 234, 234);
+    border-radius: 25px;
+    width: 60%;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid ;
+}
+.eachToDo {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(203, 234, 234);
+    border-radius: 25px;
+    width: 60%;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid ;
+}
+.buttonSpace {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 5px;
+}
+

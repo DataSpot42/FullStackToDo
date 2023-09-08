@@ -1,15 +1,24 @@
 import { Link } from 'react-router-dom'
+import '../pages/style.css'
+
 const Navbar = () => {
     return (
         <div>
             <header>
-                <div>
-                    <Link to='/'>
+                <div className='navBar'>
+                    
+                    <Link className='navBarItems'  to='/'>
                         my list
+                    
                     </Link>
-                    <Link to='/add-todo'>
+                    
+                    
+                    <Link className='navBarItems' to='/add-todo'>
                         add item
                     </Link>
+                    
+                    
+
                 </div>
             </header>
         </div>
