@@ -9,6 +9,7 @@ const App = () => {
     <div className="main">
       <BrowserRouter>
         <h1>Todo List</h1>
+        <div className="toDoList">
         <Navbar />
         <Routes>
           <Route
@@ -25,7 +26,7 @@ const App = () => {
             element={<EditTodo />}
           />
         </Routes>
-
+        </div>
       </BrowserRouter>
     </div>
   )

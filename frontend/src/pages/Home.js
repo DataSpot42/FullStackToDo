@@ -3,10 +3,11 @@ import { readTodos } from "../api/readTodos";
 import Card from '../components/Card'
 import { deleteTodo } from "../api/deleteTodo";
 import './style.css'
+import { motion } from "framer-motion";
 
 const Home = () => {
     const [todos, setTodos] = useState([]) 
-
+    
     const deleteHandler = async (todo) => {
      deleteTodo(todo) 
      

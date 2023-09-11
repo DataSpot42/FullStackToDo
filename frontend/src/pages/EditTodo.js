@@ -16,8 +16,8 @@ const EditTodo = (todo) => {
             _id: toUpdate._id,
             text: userInput,        
         }
-       let responce = await editTodo(obj)         
-        console.log(obj._id)
+       let response = await editTodo(obj)         
+        console.log(response)
         setUpdated(true)        
         
         return(obj)
@@ -34,13 +34,14 @@ const EditTodo = (todo) => {
     return (
         <div>
             <h1>edit</h1>
-            {updated? <h2>Todo updated to: {userInput} </h2> : <h2></h2>}
+            <h2>{toUpdate.text}</h2>
+            {/* {updated? <h2>Todo updated to: {userInput} </h2> : <h2></h2>} */}
             {/* <h2>Edit todo: {data}</h2> */}
             <input 
                 /* placeholder={data} */
                 onChange={(e) => {setUserInput(e.target.value)}}
             />
-            <button onClick={submitHandler}>submit</button>
+            <button className="btnLinks" onClick={submitHandler}>submit</button>
         </div>
     )
 }

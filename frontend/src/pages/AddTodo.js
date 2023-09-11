@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { addTodo } from "../api/addTodo"
+import './style.css'
 
 const AddTodo = () => {
     const [userInput, setUserInput] = useState("")
@@ -25,7 +26,7 @@ const AddTodo = () => {
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
                 />
-                <button type="submit">submit</button>
+                <button className="btnLinks" type="submit">submit</button>
             </form>
         </div>
     )
