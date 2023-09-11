@@ -1,3 +1,11 @@
+First Full Stack App
+
+As part of Week 8 and 9 of the Bootcamp this is a full stack app to allow entry of data to a MongoDB collection. A little bit of stlye has been added and this will be updated further in the week to come
+
+
+
+
+
 # Todo Fullstack
 
 ## Backend Available Scripts
